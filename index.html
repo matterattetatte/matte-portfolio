@@ -1,0 +1,103 @@
+<!-- https://validator.w3.org/nu/#textarea -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio - Matias Marti</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+   <header>
+      <nav>
+         <a href="#home">Home</a>
+         <a href="#projects">Projects</a>
+         <a href="#contact">Contact</a>
+      </nav>
+   </header>
+   <main>
+      <aside>
+         <h1>Portfolio - Matias Marti</h1>
+         <img width="150" height="130" loading="lazy" id="profile-img"
+            src="https://qlocx.com/wp-content/uploads/2022/03/qlocx-matiasstor-720x479-jpeg.webp"
+            alt="Profile picture of a smiling guy with a green background">
+         <br>
+         <br>
+         Email: <a target="_blank" rel="noopener noreferrer"
+            href="mailto:matias.marti@medieinstitutet.se">matias.marti@medieinstitutet.se</a>
+         <br>
+         <br>
+         Telegram:
+         <br>
+         <br>
+         <img width="90" height="90" loading="lazy"
+            alt="Barcode with data of a url to a telegram account: https://t.me/mattemyo"
+            src="https://barcode.tec-it.com/barcode.ashx?data=https%3A%2F%2Ft.me%2Fmattemyo&code=MobileQRUrl&eclevel=L">
+         <br>
+         <br>
+         <a href="https://t.me/mattemyo" target="_blank" rel="noopener noreferrer">https://t.me/mattemyo</a>
+      </aside>
+      <section id="home" class="content">
+         <h2>About Me</h2>
+         <p>Hello there! I develop websites and web applications. The technologies I use are: HTML5, CSS3, JavaScript
+            (ES6), React, Node, Express, and PostgreSQL. I have also made projects with jQuery, Sass, Bootstrap v3 & v4,
+            and
+            MongoDB. Almost all my code is available on Github. Currently, I am taking online courses taught by senior
+            full-stack developers on Frontend Masters and Udemy.
+            The application I am the most proud of is called parkingMapp. It makes sure people avoid getting parking
+            tickets
+            by coloring the map. More information can be found further down.
+            Apart from development, I have an interest in 3d printing. I let my creativity flow when designing in 3d and
+            making physical items using my printer.
+         </p>
+      </section>
+      <section id="projects" class="content">
+         <h2>Projects</h2>
+         <div class="projects-wrapper">
+            <div class="project">
+               <h3>parkingMapp</h3>
+               <img width="500" height="300" loading="lazy" src="https://mattemyo.github.io/Images/parkingMapp.png"
+                  alt="Image of a map with lines in different colors drawn">
+               <p><a href="https://mattemyo.github.io/ingaboter/" target="_blank" rel="noopener noreferrer">URL</a></p>
+            </div>
+            <div class="project">
+               <h3>Yodafy</h3>
+               <img width="500" height="300" loading="lazy" src="https://mattemyo.github.io/Images/yodafy.png"
+                  alt="Screenshot of a green website with some text, text input button and a picture of Yoda from Star Wars">
+               <p><a href="https://mattemyo.github.io/yodafy/" target="_blank" rel="noopener noreferrer">URL</a></p>
+            </div>
+            <div class="project">
+               <h3>Todo List</h3>
+               <img width="500" height="300" loading="lazy" src="https://mattemyo.github.io/Images/todolist.png"
+                  alt="Screenshot of a TO-DO list">
+               <p><a href="https://codepen.io/Mattemyo/pen/xYKqZW" target="_blank" rel="noopener noreferrer">URL</a></p>
+            </div>
+         </div>
+      </section>
+      <section id="contact" class="content">
+         <h2>Contact</h2>
+         <form id="form">
+            <input name="name" type="text" placeholder="Name">
+            <input name="email" type="email" placeholder="Email">
+            <input name="website" type="url" placeholder="Website">
+            <input name="phone" type="tel" placeholder="Phone">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit" onclick="submit">Send</button>
+         </form>
+      </section>
+   </main>
+   <footer>
+      <p>2025 Matias Marti</p>
+   </footer>
+   <script>
+      document.getElementById('form').addEventListener('submit', function (event) {
+         event.preventDefault();
+         const formData = new FormData(event.target);
+         console.log('form data = ', [...formData.entries()])
+      });
+   </script>
+</body>
+
+</html>
